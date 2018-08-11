@@ -2,7 +2,7 @@
 require('dotenv').config({ path: 'test/test.env' })
 
 const test = require('ava')
-const env = require('../index')
+const env = require('../dist/index')
 
 test('it fetches existing env', (t) => {
   const result = env.get('FOO')

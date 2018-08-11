@@ -1,4 +1,6 @@
 
+// @flow
+
 const is = require('is_js')
 const ok = is.existy
 
@@ -265,7 +267,7 @@ module.exports = Object
      * @param {object} options
      *
      */
-    getList (key, opts = { dilim: ',', cast: null }) {
+    getList (key: string, opts?: { dilim?: string, cast?: string } = { dilim: ',', cast: '' }) {
       const { dilim, cast } = opts
       let value
 
@@ -289,7 +291,7 @@ module.exports = Object
      * @param {object} options
      *
      */
-    list (key, opts) {
+    list (key: string, opts?: {}) {
       return this.getList(key, opts)
     }
   })
